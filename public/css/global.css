@@ -1,0 +1,55 @@
+@-webkit-keyframes pulse {
+ from { opacity: 0; }
+ to { opacity: 1.0; }
+}
+
+body {
+  color: #333333;
+  background: #111111 none repeat scroll 0% 0%;
+  font-family: Helvetica;
+  margin: 0px;
+  width: 100%;    
+}
+
+.status-box {
+  padding-left: -50px;
+  border-bottom: 4px dotted #333333;  
+}
+
+.status-box + .small {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.status {
+  font-size: 125px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.env {
+  font-size: 90px;
+}
+
+.small {
+  font-size: 45px;
+  letter-spacing: normal;  
+}
+
+.success {
+  color: #00FF00;
+}
+
+.failure {
+  color: #FF0000;
+}
+
+.building {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+}

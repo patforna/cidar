@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" rev="stylesheet" href="/css/global.css" media="screen" type="text/css">
+    <title>Cidar - Build Radiator</title>
+  </head>
+  <body>
+    <div class="status-box">
+      <span class="<%= status_of("main :: build") %>">Core</span>
+      <span class="env <%= status_of("main :: deploy-to-dev") %>">DEV</span>
+      <span class="env <%= status_of("main :: deploy-to-qa") %>">QA</span>
+      <span class="env <%= status_of("main :: deploy-to-perf") %>">PERF</span>      
+    </div>    
+    <div class="status-box">
+      <span class="<%= status_of("aim :: build") %>">Aim</span>
+      <span class="env <%= status_of("aim :: ingest-content-into-dev") %>">DEV</span>
+      <span class="env <%= status_of("aim :: ingest-content-into-qa") %>">QA</span>
+      <span class="env <%= status_of("aim :: ingest-content-into-perf") %>">PERF</span>      
+    </div>
+    <div class="status-box">
+      <span class="<%= status_of("identity :: build") %>">Identity</span>
+      <span class="env <%= status_of("identity :: deploy-to-dev") %>">DEV</span>
+      <span class="env <%= status_of("identity :: deploy-to-qa") %>">QA</span>
+      <span class="env <%= status_of("identity :: deploy-to-perf") %>">PERF</span>      
+    </div>
+    <div class="status-box small">
+      <span class="small <%= status_of("perf-test :: basic-siege-tests") %>">Perf Tests (Siege)</span>
+      <span class="small <%= status_of("jmeter-perf-test :: start-jmeter-remote") %>">Perf Tests (JMeter)</span>
+      <span class="small <%= status_of("sig :: send-source-to-sig") %>">Sig</span>                        
+    </div>    
+  </body>
+</html>
