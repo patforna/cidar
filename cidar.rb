@@ -12,7 +12,7 @@ end
 helpers do
   def status_of(project)
     @status = Status.new(@doc.xpath("//Project[@name='#{project}']").first)
-    erb 'status <%= if @status.success? then "success" else "failure" end %> <%= "building" if @status.building? %>'
+    erb 'status <%= if @status.success? then "success" else "failure" end %><%= " building" if @status.building? %>'
   end
 end
 
