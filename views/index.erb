@@ -10,7 +10,6 @@
     <div id="container">
       <div class="status-box">
         <span class="<%= status_of("main :: build") %>">Core</span>
-        <span class="details"><%= @status.buildLabel %>
         <span class="env <%= status_of("main :: deploy-to-dev") %>">DEV</span>
         <span class="details"><%= @status.buildLabel %>        
         <span class="env <%= status_of("main :: deploy-to-qa") %>">QA</span>
@@ -19,8 +18,7 @@
         <span class="details"><%= @status.buildLabel %>        
       </div>    
       <div class="status-box">
-        <span class="<%= status_of("aim :: build") %>">Aim</span>
-        <span class="details"><%= @status.buildLabel %>        
+        <span class="<%= status_of("aim :: build") %>">Aim</span>        
         <span class="env <%= status_of("aim :: ingest-content-into-dev") %>">DEV</span>
         <span class="details"><%= @status.buildLabel %>        
         <span class="env <%= status_of("aim :: ingest-content-into-qa") %>">QA</span>
@@ -30,13 +28,9 @@
       </div>
       <div class="status-box">
         <span class="<%= status_of("identity :: build") %>">Identity</span>
-        <span class="details"><%= @status.buildLabel %>        
         <span class="env <%= status_of("identity :: deploy-to-dev") %>">DEV</span>
-        <span class="details"><%= @status.buildLabel %>        
         <span class="env <%= status_of("identity :: deploy-to-qa") %>">QA</span>
-        <span class="details"><%= @status.buildLabel %>        
         <span class="env <%= status_of("identity :: deploy-to-perf") %>">PERF</span>      
-        <span class="details"><%= @status.buildLabel %>
       </div>
       <div class="status-box small">
         <span class="small <%= status_of("perf-test :: basic-siege-tests") %>">Perf Tests (Siege)</span>
