@@ -29,13 +29,17 @@
       <div class="status-box">
         <span class="<%= status_of("identity :: build") %>">Identity</span>
         <span class="env <%= status_of("identity :: deploy-to-dev") %>">DEV</span>
+        <span class="details"><%= @status.buildLabel %>        
         <span class="env <%= status_of("identity :: deploy-to-qa") %>">QA</span>
+        <span class="details"><%= @status.buildLabel %>        
         <span class="env <%= status_of("identity :: deploy-to-perf") %>">PERF</span>      
+        <span class="details"><%= @status.buildLabel %>        
       </div>
       <div class="status-box small">
-        <span class="small <%= status_of("perf-test :: basic-siege-tests") %>">Perf Tests (Siege)</span>
-        <span class="small <%= status_of("jmeter-perf-test :: start-jmeter-remote") %>">Perf Tests (JMeter)</span>
-        <span class="small <%= status_of("sig :: send-source-to-sig") %>">Sig</span>                        
+        <span class="small <%= status_of("jmeter-perf-test :: start-jmeter-remote") %>">Perf Tests</span>
+      </div>    
+      <div class="status-box small">
+        <span class="small <%= status_of("sig :: send-source-to-sig") %>">SIG</span>                        
       </div>    
     </div>
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
