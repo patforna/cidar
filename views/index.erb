@@ -2,34 +2,40 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="5">
     <link rel="stylesheet" href="/css/boilerplate.css">    
     <link rel="stylesheet" href="/css/style.css">
     <title>Cidar - Build Radiator</title>
   </head>
   <body>
-    <div class="status-box">
-      <span class="<%= status_of("main :: build") %>">Core</span>
-      <span class="env <%= status_of("main :: deploy-to-dev") %>">DEV</span>
-      <span class="env <%= status_of("main :: deploy-to-qa") %>">QA</span>
-      <span class="env <%= status_of("main :: deploy-to-perf") %>">PERF</span>      
-    </div>    
-    <div class="status-box">
-      <span class="<%= status_of("aim :: build") %>">Aim</span>
-      <span class="env <%= status_of("aim :: ingest-content-into-dev") %>">DEV</span>
-      <span class="env <%= status_of("aim :: ingest-content-into-qa") %>">QA</span>
-      <span class="env <%= status_of("aim :: ingest-content-into-perf") %>">PERF</span>      
+    <div id="container">
+      <div class="status-box">
+        <span class="<%= status_of("main :: build") %>">Core</span>
+        <span class="env <%= status_of("main :: deploy-to-dev") %>">DEV</span>
+        <span class="env <%= status_of("main :: deploy-to-qa") %>">QA</span>
+        <span class="env <%= status_of("main :: deploy-to-perf") %>">PERF</span>      
+      </div>    
+      <div class="status-box">
+        <span class="<%= status_of("aim :: build") %>">Aim</span>
+        <span class="env <%= status_of("aim :: ingest-content-into-dev") %>">DEV</span>
+        <span class="env <%= status_of("aim :: ingest-content-into-qa") %>">QA</span>
+        <span class="env <%= status_of("aim :: ingest-content-into-perf") %>">PERF</span>      
+      </div>
+      <div class="status-box">
+        <span class="<%= status_of("identity :: build") %>">Identity</span>
+        <span class="env <%= status_of("identity :: deploy-to-dev") %>">DEV</span>
+        <span class="env <%= status_of("identity :: deploy-to-qa") %>">QA</span>
+        <span class="env <%= status_of("identity :: deploy-to-perf") %>">PERF</span>      
+      </div>
+      <div class="status-box small">
+        <span class="small <%= status_of("perf-test :: basic-siege-tests") %>">Perf Tests (Siege)</span>
+        <span class="small <%= status_of("jmeter-perf-test :: start-jmeter-remote") %>">Perf Tests (JMeter)</span>
+        <span class="small <%= status_of("sig :: send-source-to-sig") %>">Sig</span>                        
+      </div>    
     </div>
-    <div class="status-box">
-      <span class="<%= status_of("identity :: build") %>">Identity</span>
-      <span class="env <%= status_of("identity :: deploy-to-dev") %>">DEV</span>
-      <span class="env <%= status_of("identity :: deploy-to-qa") %>">QA</span>
-      <span class="env <%= status_of("identity :: deploy-to-perf") %>">PERF</span>      
-    </div>
-    <div class="status-box small">
-      <span class="small <%= status_of("perf-test :: basic-siege-tests") %>">Perf Tests (Siege)</span>
-      <span class="small <%= status_of("jmeter-perf-test :: start-jmeter-remote") %>">Perf Tests (JMeter)</span>
-      <span class="small <%= status_of("sig :: send-source-to-sig") %>">Sig</span>                        
-    </div>    
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+    
+    <script defer src="js/global.js"></script>
   </body>
 </html>
