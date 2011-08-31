@@ -26,7 +26,7 @@ body {
   font-weight: bold;
   letter-spacing: -2px;
   padding-left: 25px;
-  padding-right: 25px;
+  padding-right: 10px;
 }
 
 .env {
@@ -52,4 +52,9 @@ body {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-direction: alternate;
+}
+
+.details {
+  font-size: 25px;
+  color: #F5B800;
 }

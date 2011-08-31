@@ -19,5 +19,9 @@ end
 class Status
   def initialize(node); @node = node end
   def success?; @node['lastBuildStatus'] == "Success" end
-  def building?; @node['activity'] == "Building" end  
+  def building?; @node['activity'] == "Building" end
+  def buildLabel; strip_runs @node['lastBuildLabel'] end
+  
+  private
+  def strip_runs(buildLabel); buildLabel.gsub(/\s.*/, '') end
 end
