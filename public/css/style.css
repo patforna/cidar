@@ -58,3 +58,7 @@ body {
   font-size: 25px;
   color: #F5B800;
 }
+
+.indented {
+  padding-left: 100px;
+}

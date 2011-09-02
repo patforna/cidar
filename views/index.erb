@@ -10,21 +10,19 @@
     <div id="container">
       <div class="status-box">
         <span class="<%= status_of("main :: build") %>">Core</span>
-        <span class="env <%= status_of("main :: deploy-to-dev") %>">DEV</span>
+      </div>    
+      <div class="status-box indented">
+        <span class="env <%= status_of("casper :: deploy-to-dev") %>">DEV</span>
         <span class="details"><%= @status.buildLabel %>        
-        <span class="env <%= status_of("main :: deploy-to-qa") %>">QA</span>
+        <span class="env <%= status_of("casper :: run-system-tests") %>">test</span>
         <span class="details"><%= @status.buildLabel %>        
-        <span class="env <%= status_of("main :: deploy-to-perf") %>">PERF</span>      
+        <span class="env <%= status_of("casper :: deploy-to-qa") %>">QA</span>
+        <span class="details"><%= @status.buildLabel %>        
+        <span class="env <%= status_of("casper :: deploy-to-perf") %>">PERF</span>      
         <span class="details"><%= @status.buildLabel %>        
       </div>    
       <div class="status-box">
         <span class="<%= status_of("aim :: build") %>">Aim</span>        
-        <span class="env <%= status_of("aim :: ingest-content-into-dev") %>">DEV</span>
-        <span class="details"><%= @status.buildLabel %>        
-        <span class="env <%= status_of("aim :: ingest-content-into-qa") %>">QA</span>
-        <span class="details"><%= @status.buildLabel %>        
-        <span class="env <%= status_of("aim :: ingest-content-into-perf") %>">PERF</span>      
-        <span class="details"><%= @status.buildLabel %>        
       </div>
       <div class="status-box">
         <span class="<%= status_of("identity :: build") %>">Identity</span>
