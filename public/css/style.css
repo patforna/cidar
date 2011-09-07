@@ -12,13 +12,26 @@ body {
 }
 
 .status-box {
-  padding-left: -50px;
   border-bottom: 4px dotted #333333;  
 }
 
 .status-box + .small {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.status-box ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;  
+}
+.status-box li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.status-box .details {
+  display: block;
+  padding-left: 25px;
 }
 
 .status {
@@ -55,10 +68,7 @@ body {
 }
 
 .details {
-  font-size: 25px;
+  margin-left: 5px;  
+  font-size: 35px;
   color: #F5B800;
-}
-
-.indented {
-  padding-left: 200px;
 }
