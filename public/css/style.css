@@ -72,3 +72,8 @@ body {
   font-size: 35px;
   color: #F5B800;
 }
+
+.commit_message {
+	display: block;
+	color: SaddleBrown;
+}

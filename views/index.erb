@@ -13,10 +13,12 @@
           <li>
             <span class="<%= status_of("main :: build") %>">Core</span>
             <span class="details"><%= @status.buildLabel %>                
-          </li>
+            <span class="commit_message"><%= commit_message("main :: build") %>                
+	      </li>
           <li>
             <span class="<%= status_of("aim :: build") %>">Aim</span>      
             <span class="details"><%= @status.buildLabel %>                            
+	        <span class="commit_message"><%= commit_message("aim :: build") %>                
           </li>
         </ol>
       </div>    
@@ -25,6 +27,7 @@
           <li>
             <span class="env <%= status_of("casper :: deploy-to-dev") %>">DEV</span>
             <span class="details"><%= @status.buildLabel %>        
+	        <span class="commit_message"><%= commit_message("casper :: deploy-to-dev") %>                
           </li>
           <li>
             <span class="env <%= status_of("casper :: system-tests") %>">Tests</span>

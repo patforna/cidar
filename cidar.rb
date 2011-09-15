@@ -14,6 +14,20 @@ helpers do
     @status = Status.new(@doc.xpath("//Project[@name='#{project}']").first)
     erb 'status <%= if @status.success? then "success" else "failure" end %><%= " building" if @status.building? %>'
   end
+  
+  def commit_message(project)
+    project_node = @doc.xpath("//Project[@name='#{project}']").first
+    web_url = project_node['webUrl']
+    message = get_commit_message_from_url(web_url)
+    trimmed_message = (message.length < 30) ? message : message.slice(0, 27) + "..."
+    erb "#{trimmed_message}"
+  end
+  
+  def get_commit_message_from_url (url)
+    web_html = Nokogiri::HTML(open(url))
+    comments = web_html.css(".comment dl dd")
+    return (comments && comments.length > 0) ? comments.first.text : ""
+  end
 end
 
 class Status
