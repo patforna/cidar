@@ -87,3 +87,24 @@ body {
   white-space: nowrap;
   overflow: hidden;	
 }
+
+#top-git {
+  color: yellow;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 0px;
+  top: 220px;
+  margin: 15px;
+}
+
+#top-git .total {
+  font-size: 125px;
+  text-align: left;
+}
+
+#top-git .commiter {
+  text-align: left;
+  display: block;
+  font-size: 25px;
+}

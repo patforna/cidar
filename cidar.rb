@@ -4,6 +4,10 @@ require 'sinatra'
 
 SERVER_URL = 'http://172.18.20.31:8153/go/cctray.xml'
 
+get '/git/*' do
+  open("http://localhost:9876/" + params[:splat].first).read
+end
+
 get '/' do
   @doc = Nokogiri::XML(open(SERVER_URL))
   erb :index
