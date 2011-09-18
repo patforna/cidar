@@ -10,16 +10,16 @@
     <div id="container">
       <div class="status-box">
         <ol>
-          <li>
+          <li class="upstream">
             <span class="<%= status_of("main :: build") %>">Core</span>
             <span class="details"><%= @status.buildLabel %>                
             <span class="commit_message"><%= commit_message("main :: build") %>                
-	      </li>
-          <li>
+  	      </li>
+          <li class="upstream">
             <span class="<%= status_of("aim :: build") %>">Aim</span>      
             <span class="details"><%= @status.buildLabel %>                            
-	        <span class="commit_message"><%= commit_message("aim :: build") %>                
-          </li>
+  	        <span class="commit_message"><%= commit_message("aim :: build") %>                
+          </li>  
         </ol>
       </div>    
       <div class="status-box">
@@ -27,7 +27,6 @@
           <li>
             <span class="env <%= status_of("casper :: deploy-to-dev") %>">DEV</span>
             <span class="details"><%= @status.buildLabel %>        
-	        <span class="commit_message"><%= commit_message("casper :: deploy-to-dev") %>                
           </li>
           <li>
             <span class="env <%= status_of("casper :: system-tests") %>">Tests</span>
@@ -72,8 +71,7 @@
     </div>
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-    
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>    
     <script defer src="js/global.js"></script>
   </body>
 </html>

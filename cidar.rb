@@ -18,11 +18,10 @@ helpers do
   def commit_message(project)
     project_node = @doc.xpath("//Project[@name='#{project}']").first
     web_url = project_node['webUrl']
-    message = get_commit_message_from_url(web_url)
-    trimmed_message = (message.length < 30) ? message : message.slice(0, 27) + "..."
-    erb "#{trimmed_message}"
+    get_commit_message_from_url(web_url)
   end
   
+  private  
   def get_commit_message_from_url (url)
     web_html = Nokogiri::HTML(open(url))
     comments = web_html.css(".comment dl dd")

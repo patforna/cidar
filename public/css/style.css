@@ -23,12 +23,17 @@ body {
 .status-box ol {
   list-style-type: none;
   margin: 0;
-  padding: 0;  
+  padding: 0;
 }
+
 .status-box li {
   display: inline-block;
-  margin-right: 20px;
 }
+
+.upstream {
+  width: 48%;
+}
+
 .status-box .details {
   display: block;
   padding-left: 25px;
@@ -44,6 +49,7 @@ body {
 
 .env {
   font-size: 90px;
+  margin-right: 30px;  
 }
 
 .small {
@@ -75,5 +81,9 @@ body {
 
 .commit_message {
 	display: block;
-	color: cyan;
+	color: cyan;   
+  font-size: 30px;	
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;	
 }
