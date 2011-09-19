@@ -93,7 +93,7 @@ body {
   height: 200px;
   position: absolute;
   right: 100px;
-  top: 220px;
+  bottom: 100px;
   margin: 15px;
 }
 
