@@ -24,15 +24,21 @@ function getAndShowTopGit() {
   var data = JSON.parse(jsonData);
   
   currentTotal = data.total;
-  $('#top-git .total').text(currentTotal);
+  
+  if(data.total != 0) {
+    $('#top-git .total').text(currentTotal);
+  }
 
   $('#top-git .commiters .commiter').remove();
   
   $.each(data.top, function(index, pair) {
     var commiter = $('<span/>');
     commiter.attr('class', 'commiter');
-    commiter.text(pair[1] + " " + pair[0]);
-    $('#top-git .commiters').append(commiter);
+    
+    if(pair[0] != 0) {
+      commiter.text(pair[1] + " " + pair[0]);
+      $('#top-git .commiters').append(commiter);
+    }
   });
   
 }
