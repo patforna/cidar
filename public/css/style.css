@@ -90,21 +90,28 @@ body {
 
 #top-git {
   color: yellow;
-  width: 200px;
   height: 200px;
   position: absolute;
-  right: 0px;
+  right: 100px;
   top: 220px;
   margin: 15px;
 }
 
 #top-git .total {
-  font-size: 125px;
+  font-size: 90px;
   text-align: left;
 }
 
 #top-git .commiter {
   text-align: left;
   display: block;
-  font-size: 25px;
+  font-size: 30px;
+}
+
+#top-git .commiter.odd {
+  color: #C04040;
+}
+
+#top-git .commiter.even {
+  color: #C04000;
 }
