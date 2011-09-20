@@ -12,11 +12,6 @@ $(document).ready(function() {
   setInterval(getAndShowTopGit, 2 * FIVE_SECONDS)
 });
 
-function capitaliseFirstLetter(str)
-{
-    return str.charAt(0).toUpperCase() + str.slice(1);
-};
-
 function getAndShowTopGit() {
   var response = $.ajax({ type: "GET", url: '/git/top-git-today.json', async: false });
   if (response.status != 200) {
@@ -42,7 +37,7 @@ function getAndShowTopGit() {
     commiter.attr('class', 'commiter ' + zebra);
     
     if(pair[0] != 0) {
-      commiter.text(pair[0] + " " + capitaliseFirstLetter(pair[1]));
+      commiter.text(pair[0] + " - " + pair[1]);
       $('#top-git .commiters').append(commiter);
     }
   });
