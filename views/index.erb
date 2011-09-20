@@ -16,13 +16,18 @@
         <ol>
           <li class="upstream">
             <span class="<%= status_of("main :: build") %>">Core</span>
-            <span class="details"><%= @status.buildLabel %>                
-            <span class="commit_message"><%= commit_message("main :: build") %>                
-  	      </li>
+            <span class="details"><%= @status.buildLabel %></span>                
+            <span class="commit_message"><%= commit_message("main :: build") %></span>
+  	  </li>
           <li class="upstream">
             <span class="<%= status_of("aim :: build") %>">Aim</span>      
-            <span class="details"><%= @status.buildLabel %>                            
-  	        <span class="commit_message"><%= commit_message("aim :: build") %>                
+            <span class="details"><%= @status.buildLabel %></span> 
+  	    <span class="commit_message"><%= commit_message("aim :: build") %></span>
+          </li>  
+          <li class="upstream">
+            <span class="<%= status_of("identity :: build") %>">Identity</span>      
+            <span class="details"><%= @status.buildLabel %></span>
+  	    <span class="commit_message"><%= commit_message("identity :: build") %></span>
           </li>  
         </ol>
       </div>    
@@ -30,39 +35,19 @@
         <ol>
           <li>
             <span class="env <%= status_of("casper :: deploy-to-dev") %>">DEV</span>
-            <span class="details"><%= @status.buildLabel %>        
+            <span class="details"><%= @status.buildLabel %></span>
           </li>
           <li>
             <span class="env <%= status_of("casper :: system-tests") %>">Tests</span>
-            <span class="details"><%= @status.buildLabel %>        
+            <span class="details"><%= @status.buildLabel %></span>
           </li>
           <li>
             <span class="env <%= status_of("casper :: deploy-to-qa") %>">QA</span>
-            <span class="details"><%= @status.buildLabel %>        
+            <span class="details"><%= @status.buildLabel %></span>
           </li>
           <li>
             <span class="env <%= status_of("casper :: deploy-to-perf") %>">PERF</span>      
-            <span class="details"><%= @status.buildLabel %>        
-          </li>
-        </ol>
-      </div>    
-      <div class="status-box">
-        <ol>
-          <li>
-            <span class="<%= status_of("identity :: build") %>">Identity</span>      
-            <span class="details"><%= @status.buildLabel %>                
-          </li>
-          <li>        
-            <span class="env <%= status_of("identity :: deploy-to-dev") %>">DEV</span>
-            <span class="details"><%= @status.buildLabel %>                    
-          </li>
-          <li>
-            <span class="env <%= status_of("identity :: deploy-to-qa") %>">QA</span>
-            <span class="details"><%= @status.buildLabel %>        
-          </li>
-          <li>
-            <span class="env <%= status_of("identity :: deploy-to-perf") %>">PERF</span>      
-            <span class="details"><%= @status.buildLabel %>        
+            <span class="details"><%= @status.buildLabel %></span>
           </li>
         </ol>
       </div>
