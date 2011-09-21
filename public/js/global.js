@@ -8,8 +8,8 @@ $(document).ready(function() {
     $("#container").load(window.location + " #container");
   }
                                 
-  setInterval(refresh_content, FIVE_SECONDS)
-  setInterval(getAndShowTopGit, 2 * FIVE_SECONDS)
+  setInterval(refresh_content, FIVE_SECONDS);
+  setInterval(getAndShowTopGit, 2 * FIVE_SECONDS);
 });
 
 function getAndShowTopGit() {

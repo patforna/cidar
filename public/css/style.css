@@ -115,3 +115,13 @@ body {
 #top-git .commiter.even {
   color: #F5B800;
 }
+
+.people {
+  float: right;
+}
+
+.people img {
+  width: 150px;
+  height: 150px;
+  padding-left: 10px;
+}
