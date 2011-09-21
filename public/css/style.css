@@ -125,3 +125,27 @@ body {
   height: 150px;
   padding-left: 10px;
 }
+
+.stars { 
+	position: relative;
+	width: 91px;
+	height: 17px;
+	margin-left: 20px;
+}
+.stars .cover {
+	position: absolute;
+	background: transparent url(/images/no-stars.png) top left no-repeat;
+	top: 0px;
+	left: 0px;
+	width: 91px;
+	height: 17px;
+	z-index: 101;
+}
+.stars .progress {
+	position: absolute;
+	background: transparent url(/images/full-stars.png) top left no-repeat;
+	top: 0px;
+	left: 0px;
+	height: 17px;
+	z-index: 102;
+}
