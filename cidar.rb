@@ -5,7 +5,7 @@ require 'json'
 
 
 SERVER_URL = 'http://172.18.20.31:8153/go/cctray.xml'
-CLOJURE_SERVER_URL = 'http://localhost:9876'
+CLOJURE_SERVER_URL = 'http://172.18.20.40:9876'
 
 get '/git/*' do
   url = CLOJURE_SERVER_URL + request.url.scan(/git(\/.*)/).first.first
@@ -31,12 +31,10 @@ class Status
   def buildLabel; strip_runs @node['lastBuildLabel'] end
   
   def commit_message
-    puts "Getting message for "+@node['webUrl']
     get_commit_message_from_url(@node['webUrl'])  
   end
   
   def commiters
-    puts "Getting commiters for "+commit_message
     commitersJson = open(URI.escape(CLOJURE_SERVER_URL + '/commiters.json?message="' + commit_message + '"')).read
     JSON.parse(commitersJson)
   end
