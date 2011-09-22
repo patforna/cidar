@@ -36,7 +36,7 @@ class Status
   
   def commiters
     commitersJson = open(URI.escape(CLOJURE_SERVER_URL + '/commiters.json?message="' + commit_message + '"')).read
-    JSON.parse(commitersJson)
+    JSON.parse(commitersJson).take(3)
   end
   
   
