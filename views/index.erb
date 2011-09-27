@@ -44,6 +44,16 @@
             <span class="details"><%= @status.buildLabel %></span>
             <span class="commit_message"><%= @status.commit_message %></span>
           </li>  
+          <li class="upstream">
+            <span class="<%= status_of("track :: build") %>">Track</span>      
+            <span class="people">
+              <% @status.commiters.each do |name| %>
+                <img src="/images/<%=name%>.jpg"/>
+              <% end %>
+            </span>
+            <span class="details"><%= @status.buildLabel %></span>
+            <span class="commit_message"><%= @status.commit_message %></span>
+          </li>  
         </ol>
       </div>    
       <div class="status-box">
