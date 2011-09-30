@@ -34,17 +34,32 @@ body {
   width: 48%;
 }
 
-.status-box .details {
-  display: block;
-  padding-left: 25px;
-}
-
 .status {
   font-size: 125px;
   font-weight: bold;
   letter-spacing: -2px;
   padding-left: 25px;
   padding-right: 10px;
+}
+
+.details, .commit-message {
+  display: block;
+  padding-left: 25px;  
+  margin-left: 5px;    
+}
+
+.details {
+  font-size: 35px;
+  color: #F5B800;
+}
+
+.commit-message {
+	display: block;
+	color: cyan;   
+  font-size: 30px;	
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;	
 }
 
 .env {
@@ -71,21 +86,6 @@ body {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-direction: alternate;
-}
-
-.details {
-  margin-left: 5px;  
-  font-size: 35px;
-  color: #F5B800;
-}
-
-.commit_message {
-	display: block;
-	color: cyan;   
-  font-size: 30px;	
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;	
 }
 
 #top-git {
