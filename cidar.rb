@@ -19,7 +19,11 @@ end
 
 helpers do
   def status_of(project)
-    @status = Status.new(@doc.xpath("//Project[@name='#{project}']").first)
+    @status = Status.new(@doc.xpath(".//Project[regex(., '^#{project}$')]", Class.new {
+      def regex node_set, regex
+        node_set.find_all { |node| node['name'] =~ /#{regex}/ }
+      end
+    }.new).first)
     erb 'status <%= if @status.success? then "success" else "failure" end %><%= " building" if @status.building? %>'
   end
 end
