@@ -67,11 +67,11 @@
             <span class="details"><%= @status.buildLabel %></span>
           </li>
           <li>
-            <span class="env <%= status_of('casper :: [\w]*-qa') %>">QA</span>
+            <span class="env <%= status_of('casper :: [\w-]*-qa') %>">QA</span>
             <span class="details"><%= @status.buildLabel %></span>
           </li>
           <li>
-            <span class="env <%= status_of('casper :: [\w]*-perf') %>">PERF</span>
+            <span class="env <%= status_of('casper :: [\w-]*-perf') %>">PERF</span>
             <span class="details"><%= @status.buildLabel %></span>
           </li>
         </ol>

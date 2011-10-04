@@ -40,7 +40,7 @@ class Status
   end
   
   def building?
-    @nodes.all? { |node| node['activity'] == "Building" }
+    @nodes.any? { |node| node['activity'] == "Building" }
   end
   
   def buildLabel
