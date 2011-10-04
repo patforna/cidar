@@ -66,13 +66,12 @@
             <span class="env <%= status_of("casper :: system-tests") %>">Tests</span>
             <span class="details"><%= @status.buildLabel %></span>
           </li>
-          <!-- casper :: [\w]*-qa -->          
           <li>
-            <span class="env <%= status_of("casper :: deploy-dependencies-to-qa") %>">QA-Deps</span>
+            <span class="env <%= status_of('casper :: [\w]*-qa') %>">QA</span>
             <span class="details"><%= @status.buildLabel %></span>
           </li>
           <li>
-            <span class="env <%= status_of("casper :: deploy-core-to-qa") %>">QA</span>
+            <span class="env <%= status_of('casper :: [\w]*-perf') %>">PERF</span>
             <span class="details"><%= @status.buildLabel %></span>
           </li>
         </ol>
