@@ -59,12 +59,12 @@
       <div class="status-box">
         <ol>
           <li>
-            <span class="env <%= status_of("casper :: deploy-to-dev") %>">DEV</span>
+            <span class="env <%= status_of("casper :: [\w-]*-dev") %>">DEV</span>
             <span class="details"><%= @status.buildLabel %></span>
           </li>
           <li>
             <span class="env <%= status_of("casper :: system-tests") %>">Tests</span>
-            <span class="details"><%= @status.buildLabel %></span>
+            <span class="details"><%= @status.buildLabel %></span>	
           </li>
           <li>
             <span class="env <%= status_of('casper :: [\w-]*-qa') %>">QA</span>
