@@ -70,15 +70,8 @@
             <span class="env <%= status_of('casper :: [\w]*-qa') %>">QA</span>
             <span class="details"><%= @status.buildLabel %></span>
           </li>
-          <li>
-            <span class="env <%= status_of('casper :: [\w]*-perf') %>">PERF</span>
-            <span class="details"><%= @status.buildLabel %></span>
-          </li>
         </ol>
       </div>
-      <div class="status-box small">
-        <span class="small <%= status_of("jmeter-perf-test :: start-jmeter-remote") %>">Perf Tests</span>
-      </div>    
       <div class="status-box small">
         <span class="small <%= status_of("sig :: send-source-to-sig") %>">SIG</span>                        
         <div class="stars">
