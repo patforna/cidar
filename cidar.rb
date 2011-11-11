@@ -48,7 +48,7 @@ class Status
   end
   
   def commit_message
-    get_commit_message_from_url(@nodes.first['webUrl'])  
+    get_commit_message_from(@nodes.first['webUrl'])  
   end
   
   def commiters
@@ -62,7 +62,7 @@ class Status
     buildLabel.gsub(/\s.*/, '')
   end
   
-  def get_commit_message_from_url (url)
+  def get_commit_message_from(url)
     web_html = Nokogiri::HTML(open(url))
     comments = web_html.css(".comment dl dd")
     return (comments && comments.length > 0) ? comments.first.text : ""
