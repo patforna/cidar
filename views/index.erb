@@ -15,7 +15,17 @@
       <div class="status-box">
         <ol>
           <li class="upstream">
-            <span class="<%= status_of("main :: build") %>">Core</span>
+            <span class="<%= status_of("core :: build") %>">Core</span>
+            <span class="people">
+              <% @status.commiters.each do |name| %>
+                <img src="/images/<%=name%>.jpg"/>
+              <% end %>
+            </span>
+            <span class="details"><%= @status.buildLabel %></span>                
+            <span class="commit-message"><%= @status.commit_message %></span>
+          </li>
+          <li class="upstream">
+            <span class="<%= status_of("core-marklogic :: integration_functional_tests") %>">Core ML</span>
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
