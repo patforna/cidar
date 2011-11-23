@@ -25,6 +25,16 @@
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
           <li class="upstream">
+            <span class="<%= status_of("track :: build") %>">Track</span>      
+            <span class="people">
+              <% @status.commiters.each do |name| %>
+                <img src="/images/<%=name%>.jpg"/>
+              <% end %>
+            </span>
+            <span class="details"><%= @status.buildLabel %></span>
+            <span class="commit-message"><%= @status.commit_message %></span>
+          </li>  
+          <li class="upstream">
             <span class="<%= status_of("core-marklogic :: integration_functional_tests") %>">Core ML</span>
             <span class="people">
               <% @status.commiters.each do |name| %>
@@ -34,6 +44,16 @@
             <span class="details"><%= @status.buildLabel %></span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
+          <li class="upstream">
+            <span class="<%= status_of("track-marklogic :: integration_functional_tests") %>">Track ML</span>      
+            <span class="people">
+              <% @status.commiters.each do |name| %>
+                <img src="/images/<%=name%>.jpg"/>
+              <% end %>
+            </span>
+            <span class="details"><%= @status.buildLabel %></span>
+            <span class="commit-message"><%= @status.commit_message %></span>
+          </li>  
           <li class="upstream">
             <span class="<%= status_of("aim :: build") %>">Aim</span>      
             <span class="people">
@@ -46,16 +66,6 @@
           </li>  
           <li class="upstream">
             <span class="<%= status_of("identity :: build") %>">Identity</span>      
-            <span class="people">
-              <% @status.commiters.each do |name| %>
-                <img src="/images/<%=name%>.jpg"/>
-              <% end %>
-            </span>
-            <span class="details"><%= @status.buildLabel %></span>
-            <span class="commit-message"><%= @status.commit_message %></span>
-          </li>  
-          <li class="upstream">
-            <span class="<%= status_of("track :: build") %>">Track</span>      
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
