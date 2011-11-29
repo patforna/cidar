@@ -63,13 +63,14 @@
             <span class="details"><%= @status.buildLabel %></span>
           </li>
           <li>
-            <span class="env <%= status_of('casper :: [\w]*-qa') %>">QA</span>
+            <span class="env <%= status_of('^qa :: [\w-]*$') %>">QA</span>
             <span class="details"><%= @status.buildLabel %></span>
           </li>
+          <!-- enable when we've got the data in cctray
           <li>
-            <span class="env <%= status_of('casper :: [\w]*-live') %>">LIVE</span>
+            <span class="env <%= status_of('^live :: [\w-]*$') %>">LIVE</span>
             <span class="details"><%= @status.buildLabel %></span>
-          </li>          
+          </li>           -->
         </ol>
       </div>
       <div class="status-box small">
