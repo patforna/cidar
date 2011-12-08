@@ -70,6 +70,10 @@
             <span class="env <%= status_of('^live :: [\w-]*$') %>">LIVE</span>
             <span class="details"><%= @status.buildLabel %></span>
           </li>          
+          <li>
+            <span class="env <%= status_of('^live-b :: [\w-]*$') %>">LIVE-B</span>
+            <span class="details"><%= @status.buildLabel %></span>
+          </li>                    
         </ol>
       </div>
       <div class="status-box small">
