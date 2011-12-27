@@ -23,7 +23,7 @@
             </span>
             <span class="details">
               <span class="build"><%= @status.buildLabel %></span>
-              <span class="time"><%= @status.latest_time('core') %></span>                
+              <span class="time"><%= @status.fastest_time('core') %></span>                
             </span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
@@ -36,7 +36,7 @@
             </span>
             <span class="details">
               <span class="build"><%= @status.buildLabel %></span>
-              <span class="time"><%= @status.latest_time('aim') %></span>                
+              <span class="time"><%= @status.fastest_time('aim') %></span>                
             </span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>  
@@ -49,7 +49,7 @@
             </span>
             <span class="details">
               <span class="build"><%= @status.buildLabel %></span>
-              <span class="time"></span>                
+              <span class="time"><%= @status.fastest_time('identity') %></span>                
             </span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>  
@@ -62,7 +62,7 @@
             </span>
             <span class="details">
               <span class="build"><%= @status.buildLabel %></span>
-              <span class="time"></span>                
+              <span class="time"><%= @status.fastest_time('track') %></span>                
             </span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>  

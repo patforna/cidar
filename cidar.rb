@@ -59,8 +59,8 @@ class Status
     JSON.parse(commitersJson).take(2)
   end
   
-  def latest_time(pipeline)
-    seconds = @end_to_end_times[pipeline]["latest"]["time"]
+  def fastest_time(pipeline)
+    seconds = @end_to_end_times[pipeline]["fastest"]["time"]
     format('%02d:%02d', seconds/60, seconds%60)
   end
   
