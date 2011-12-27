@@ -14,44 +14,56 @@
     <div id="container">
       <div class="status-box">
         <ol>
-          <li class="upstream">
+          <li id="core" class="upstream">
             <span class="<%= status_of('^(core :: build)|(core-marklogic :: integration_functional_tests)$') %>">Core</span>
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
-            <span class="details"><%= @status.buildLabel %></span>                
+            <span class="details">
+              <span class="build"><%= @status.buildLabel %></span>
+              <span class="time"><%= @status.latest_time('core') %></span>                
+            </span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
-          <li class="upstream">
+          <li id="aim" class="upstream">
             <span class="<%= status_of('aim :: build') %>">Aim</span>      
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
-            <span class="details"><%= @status.buildLabel %></span> 
+            <span class="details">
+              <span class="build"><%= @status.buildLabel %></span>
+              <span class="time"><%= @status.latest_time('aim') %></span>                
+            </span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>  
-          <li class="upstream">
+          <li id="identity" class="upstream">
             <span class="<%= status_of('identity :: build') %>">Identity</span>      
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
-            <span class="details"><%= @status.buildLabel %></span>
+            <span class="details">
+              <span class="build"><%= @status.buildLabel %></span>
+              <span class="time"></span>                
+            </span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>  
-          <li class="upstream">
+          <li id="track" class="upstream">
             <span class="<%= status_of('^(track :: build)|(track-marklogic :: integration_functional_tests)$') %>">Track</span>      
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
-            <span class="details"><%= @status.buildLabel %></span>
+            <span class="details">
+              <span class="build"><%= @status.buildLabel %></span>
+              <span class="time"></span>                
+            </span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>  
         </ol>
@@ -60,19 +72,27 @@
         <ol>
           <li>
             <span class="env <%= status_of('^dev-system-tests :: [\w-]*$') %>">DEV</span>
-            <span class="details"><%= @status.buildLabel %></span>
+            <span class="details">
+              <span class="build"><%= @status.buildLabel %></span>
+            </span>                
           </li>
           <li>
             <span class="env <%= status_of('^qa :: [\w-]*$') %>">QA</span>
-            <span class="details"><%= @status.buildLabel %></span>
+            <span class="details">
+              <span class="build"><%= @status.buildLabel %></span>
+            </span>                
           </li>
           <li>
             <span class="env <%= status_of('^live-a :: [\w-]*$') %>">LIVE-A</span>
-            <span class="details"><%= @status.buildLabel %></span>
+            <span class="details">
+              <span class="build"><%= @status.buildLabel %></span>
+            </span>                
           </li>          
           <li>
             <span class="env <%= status_of('^live-b :: [\w-]*$') %>">LIVE-B</span>
-            <span class="details"><%= @status.buildLabel %></span>
+            <span class="details">
+              <span class="build"><%= @status.buildLabel %></span>
+            </span>                
           </li>                    
         </ol>
       </div>
@@ -88,6 +108,5 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>    
     <script defer src="js/global.js"></script>
-    
   </body>
 </html>

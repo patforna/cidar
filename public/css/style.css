@@ -50,11 +50,17 @@ body {
 
 .details {
   font-size: 35px;
+}
+
+.details .build {
   color: #F5B800;
 }
 
+.details .time {
+  color: red;
+}
+
 .commit-message {
-	display: block;
 	color: cyan;   
   font-size: 30px;	
   text-overflow: ellipsis;
