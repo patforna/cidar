@@ -55,11 +55,11 @@ body {
 }
 
 .time {
-  color: SlateBlue;
+  color: Tomato;
   font-size: 75px;
-  left: 435px;
+  left: 165px;
   position: absolute;
-  top: 135px;
+  top: 120px;
 }
 
 .commit-message {
