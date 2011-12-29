@@ -21,10 +21,8 @@
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
-            <span class="details">
-              <span class="build"><%= @status.buildLabel %></span>
-              <span class="time"><%= @status.fastest_time('core') %></span>                
-            </span>                
+            <span class="build"><%= @status.buildLabel %></span>
+            <span class="time"><%= @status.fastest_time('core') %></span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
           <li id="aim" class="upstream">
@@ -34,10 +32,8 @@
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
-            <span class="details">
-              <span class="build"><%= @status.buildLabel %></span>
-              <span class="time"><%= @status.fastest_time('aim') %></span>                
-            </span>                
+            <span class="build"><%= @status.buildLabel %></span>
+            <span class="time"><%= @status.fastest_time('aim') %></span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>  
           <li id="identity" class="upstream">
@@ -47,10 +43,8 @@
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
-            <span class="details">
-              <span class="build"><%= @status.buildLabel %></span>
-              <span class="time"><%= @status.fastest_time('identity') %></span>                
-            </span>                
+            <span class="build"><%= @status.buildLabel %></span>
+            <span class="time"><%= @status.fastest_time('identity') %></span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>  
           <li id="track" class="upstream">
@@ -60,10 +54,8 @@
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
-            <span class="details">
-              <span class="build"><%= @status.buildLabel %></span>
-              <span class="time"><%= @status.fastest_time('track') %></span>                
-            </span>                
+            <span class="build"><%= @status.buildLabel %></span>
+            <span class="time"><%= @status.fastest_time('track') %></span>                
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>  
         </ol>
@@ -72,27 +64,19 @@
         <ol>
           <li>
             <span class="env <%= status_of('^dev-system-tests :: [\w-]*$') %>">DEV</span>
-            <span class="details">
-              <span class="build"><%= @status.buildLabel %></span>
-            </span>                
+            <span class="build"><%= @status.buildLabel %></span>
           </li>
           <li>
             <span class="env <%= status_of('^qa :: [\w-]*$') %>">QA</span>
-            <span class="details">
-              <span class="build"><%= @status.buildLabel %></span>
-            </span>                
+            <span class="build"><%= @status.buildLabel %></span>
           </li>
           <li>
             <span class="env <%= status_of('^live-a :: [\w-]*$') %>">LIVE-A</span>
-            <span class="details">
-              <span class="build"><%= @status.buildLabel %></span>
-            </span>                
+            <span class="build"><%= @status.buildLabel %></span>
           </li>          
           <li>
             <span class="env <%= status_of('^live-b :: [\w-]*$') %>">LIVE-B</span>
-            <span class="details">
-              <span class="build"><%= @status.buildLabel %></span>
-            </span>                
+            <span class="build"><%= @status.buildLabel %></span>
           </li>                    
         </ol>
       </div>

@@ -32,6 +32,7 @@ body {
 
 .upstream {
   width: 48%;
+  position: relative;
 }
 
 .status {
@@ -42,22 +43,23 @@ body {
   padding-right: 10px;
 }
 
-.details, .commit-message {
+.build, .commit-message {
   display: block;
   padding-left: 25px;  
   margin-left: 5px;    
 }
 
-.details {
+.build {
   font-size: 35px;
-}
-
-.details .build {
   color: #F5B800;
 }
 
-.details .time {
-  color: red;
+.time {
+  color: SlateBlue;
+  font-size: 75px;
+  left: 435px;
+  position: absolute;
+  top: 135px;
 }
 
 .commit-message {
