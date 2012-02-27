@@ -59,7 +59,7 @@
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
           <li id="authentication" class="upstream">
-            <span class="<%= status_of('authentication :: build') %>">Identity</span>
+            <span class="<%= status_of('authentication :: build') %>">Authentication</span>
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
