@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/boilerplate.css">    
+    <link rel="stylesheet" href="/css/boilerplate.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Cidar - Build Radiator</title>
   </head>
@@ -22,55 +22,54 @@
               <% end %>
             </span>
             <span class="build"><%= @status.buildLabel %></span>
-            <span class="time"><%= @status.fastest_time('core') %></span>                
+            <span class="time"><%= @status.fastest_time('core') %></span>
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
           <li id="aim" class="upstream">
-            <span class="<%= status_of('aim :: build') %>">Aim</span>      
+            <span class="<%= status_of('aim :: build') %>">Aim</span>
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
             <span class="build"><%= @status.buildLabel %></span>
-            <span class="time"><%= @status.fastest_time('aim') %></span>                
+            <span class="time"><%= @status.fastest_time('aim') %></span>
             <span class="commit-message"><%= @status.commit_message %></span>
-          </li>  
+          </li>
           <li id="identity" class="upstream">
-            <span class="<%= status_of('identity :: build') %>">Identity</span>      
+            <span class="<%= status_of('identity :: build') %>">Identity</span>
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
             <span class="build"><%= @status.buildLabel %></span>
-            <span class="time"><%= @status.fastest_time('identity') %></span>                
+            <span class="time"><%= @status.fastest_time('identity') %></span>
             <span class="commit-message"><%= @status.commit_message %></span>
-          </li>  
+          </li>
           <li id="track" class="upstream">
-            <span class="<%= status_of('^(track :: build)|(track-marklogic :: integration_functional_tests)$') %>">Track</span>      
+            <span class="<%= status_of('^(track :: build)|(track-marklogic :: integration_functional_tests)$') %>">Track</span>
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
             <span class="build"><%= @status.buildLabel %></span>
-            <span class="time"><%= @status.fastest_time('track') %></span>                
+            <span class="time"><%= @status.fastest_time('track') %></span>
             <span class="commit-message"><%= @status.commit_message %></span>
-          </li>  
+          </li>
           <li id="authentication" class="upstream">
-            <span class="<%= status_of('authentication :: build') %>">Identity</span>      
+            <span class="<%= status_of('authentication :: build') %>">Identity</span>
             <span class="people">
               <% @status.commiters.each do |name| %>
                 <img src="/images/<%=name%>.jpg"/>
               <% end %>
             </span>
             <span class="build"><%= @status.buildLabel %></span>
-            <span class="time"><%= @status.fastest_time('authentication') %></span>                
             <span class="commit-message"><%= @status.commit_message %></span>
-          </li>  
+          </li>
         </ol>
-      </div>    
+      </div>
       <div class="status-box">
         <ol>
           <li>
@@ -84,24 +83,24 @@
           <li>
             <span class="env <%= status_of('^live-a :: [\w-]*$') %>">LIVE-A</span>
             <span class="build"><%= @status.buildLabel %></span>
-          </li>          
+          </li>
           <li>
             <span class="env <%= status_of('^live-b :: [\w-]*$') %>">LIVE-B</span>
             <span class="build"><%= @status.buildLabel %></span>
-          </li>                    
+          </li>
         </ol>
       </div>
       <div class="status-box small">
-        <span class="small <%= status_of("sig :: send-source-to-sig") %>">SIG</span>                        
+        <span class="small <%= status_of("sig :: send-source-to-sig") %>">SIG</span>
         <div class="stars">
           <div class="cover"></div>
           <div class="progress" style="width: 84%;"></div>
         </div>
-      </div>    
+      </div>
     </div>
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>    
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
     <script defer src="js/global.js"></script>
   </body>
 </html>
