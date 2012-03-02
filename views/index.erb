@@ -68,6 +68,16 @@
             <span class="build"><%= @status.buildLabel %></span>
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
+          <li id="mud" class="upstream">
+            <span class="<%= status_of('mud :: build') %>">MUD</span>
+            <span class="people">
+              <% @status.commiters.each do |name| %>
+                <img src="/images/<%=name%>.jpg"/>
+              <% end %>
+            </span>
+            <span class="build"><%= @status.buildLabel %></span>
+            <span class="commit-message"><%= @status.commit_message %></span>
+          </li>
         </ol>
       </div>
       <div class="status-box">
