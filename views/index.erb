@@ -22,7 +22,6 @@
               <% end %>
             </span>
             <span class="build"><%= @status.buildLabel %></span>
-            <span class="time"><%= @status.fastest_time('core') %></span>
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
           <li id="aim" class="upstream">
@@ -33,7 +32,6 @@
               <% end %>
             </span>
             <span class="build"><%= @status.buildLabel %></span>
-            <span class="time"><%= @status.fastest_time('aim') %></span>
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
           <li id="identity" class="upstream">
@@ -44,7 +42,6 @@
               <% end %>
             </span>
             <span class="build"><%= @status.buildLabel %></span>
-            <span class="time"><%= @status.fastest_time('identity') %></span>
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
           <li id="track" class="upstream">
@@ -55,7 +52,6 @@
               <% end %>
             </span>
             <span class="build"><%= @status.buildLabel %></span>
-            <span class="time"><%= @status.fastest_time('track') %></span>
             <span class="commit-message"><%= @status.commit_message %></span>
           </li>
           <li id="authentication" class="upstream">
