@@ -9,13 +9,21 @@ CLOJURE_SERVER_URL = 'http://172.18.20.40:9876'
 
 get '/git/*' do
   url = CLOJURE_SERVER_URL + request.url.scan(/git(\/.*)/).first.first
-  open(url).read
+  readFromUrl(url)
 end
 
 get '/' do
   @doc = Nokogiri::XML(open(SERVER_URL))
-  @end_to_end_times = JSON.parse(open(CLOJURE_SERVER_URL + "/end-to-end-times.json").read)
+  @end_to_end_times = JSON.parse(readFromUrl(CLOJURE_SERVER_URL + "/end-to-end-times.json"))
   erb :index
+end
+
+def readFromUrl(url)
+  begin
+    open(url).read
+  rescue 
+    "{}"
+  end
 end
 
 helpers do
@@ -55,16 +63,15 @@ class Status
   end
   
   def commiters
-    commitersJson = open(URI.escape(CLOJURE_SERVER_URL + '/commiters.json?message="' + commit_message + '"')).read
+    commitersJson = readFromUrl(URI.escape(CLOJURE_SERVER_URL + '/commiters.json?message="' + commit_message + '"'))
     JSON.parse(commitersJson).take(2)
   end
   
   def fastest_time(pipeline)
-    fastestMap = @end_to_end_times[pipeline]["fastest"]
-    unless (fastestMap.nil?) 
+    begin
     	seconds = @end_to_end_times[pipeline]["fastest"]["time"]
     	format('%02d:%02d', seconds/60, seconds%60)
-    else 
+    rescue 
 	""
     end
   end
