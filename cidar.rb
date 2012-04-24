@@ -60,8 +60,13 @@ class Status
   end
   
   def fastest_time(pipeline)
-    seconds = @end_to_end_times[pipeline]["fastest"]["time"]
-    format('%02d:%02d', seconds/60, seconds%60)
+    fastestMap = @end_to_end_times[pipeline]["fastest"]
+    unless (fastestMap.nil?) 
+    	seconds = @end_to_end_times[pipeline]["fastest"]["time"]
+    	format('%02d:%02d', seconds/60, seconds%60)
+    else 
+	""
+    end
   end
   
   
