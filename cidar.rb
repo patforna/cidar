@@ -4,7 +4,7 @@ require 'sinatra'
 require 'json'
 
 
-SERVER_URL = 'http://172.18.20.31:8153/go/cctray.xml'
+SERVER_URL = 'http://ci.tools.springer-sbm.com:8153/go/cctray.xml'
 CLOJURE_SERVER_URL = 'http://172.18.20.40:9876'
 
 get '/git/*' do
